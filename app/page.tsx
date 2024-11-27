@@ -1,25 +1,23 @@
+"use server";
 import { LoginButton } from "@/components/auth/login-button";
 import { Button } from "@/components/ui/button";
 import { cn } from "../lib/utils";
+import Hero from "./shacn/Hero";
+import Feature43 from "./shacn/feature43";
+import Footer2 from "./shacn/footer2";
+import Stat1 from "./shacn/stat1";
+import Team1 from "./shacn/team1";
+import Logos3 from "./shacn/logos3";
 
-export default function Home() {
+export default async function Home() {
   return (
-    <main className="w-full flex h-screen items-center justify-center">
-      <div className="flex flex-col items-center space-y-6">
-        <h1 className={cn("text-6xl font-medium drop-shadow-sm")}>
-          Next AuthJS
-        </h1>
-        <p className="text-lg text-black/50 font-light">
-          A simple authentication service created by NextJs and AuthJs
-        </p>
-        <div>
-          <LoginButton asChild>
-            <Button className="text-white" size={"lg"}>
-              Sign in
-            </Button>
-          </LoginButton>
-        </div>
-      </div>
-    </main>
+    <>
+      <Hero />
+      <Feature43 />
+      <Stat1 />
+      <Team1 />
+      <Logos3 />
+      <Footer2 />
+    </>
   );
 }

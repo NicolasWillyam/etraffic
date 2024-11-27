@@ -48,7 +48,6 @@ export const login = async (
   }
 
   if (existingUser.isTwoFactorEnabled && existingUser.email) {
-    console.log("2FA checked open");
     if (code) {
       // Verify Code
       const twoFactorToken = await getTwoFactorTokenByEmail(existingUser.email);

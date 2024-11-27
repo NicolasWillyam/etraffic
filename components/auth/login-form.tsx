@@ -69,8 +69,6 @@ const LoginForm = () => {
             form.reset();
             setError(data.success);
           }
-
-          console.log(data?.twoFactor);
           if (data?.twoFactor) {
             setShowTwoFactor(true);
           }
