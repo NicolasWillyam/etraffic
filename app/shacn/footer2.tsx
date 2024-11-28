@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const sections = [
   {
     title: "Product",
@@ -39,6 +41,8 @@ const sections = [
   },
 ];
 
+
+
 const Footer2 = () => {
   return (
     <section className="py-32">
@@ -46,7 +50,7 @@ const Footer2 = () => {
         <footer>
           <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
             <div className="col-span-2 mb-8 lg:mb-0">
-              <img
+              <Image
                 src="https://www.shadcnblocks.com/images/block/logos/shadcn-ui.svg"
                 alt="logo"
                 className="mb-4 h-7"

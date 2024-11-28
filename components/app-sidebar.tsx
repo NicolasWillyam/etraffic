@@ -78,11 +78,11 @@ const data = {
       items: [
         {
           title: "Genesis",
-          url: "#",
+          url: "/genesis",
         },
         {
           title: "Explorer",
-          url: "#",
+          url: "/explorer",
         },
         {
           title: "Quantum",

@@ -14,7 +14,7 @@ const page = () => {
         </p>
         <div className="mt-12 space-y-6">
           <p>
-            This is NOT a component library. It's a collection of re-usable
+            This is NOT a component library. It s a collection of re-usable
             components that you can copy and paste into your apps.
           </p>
           <p>What do you mean by not a component library?</p>
