@@ -62,8 +62,8 @@ const data = {
           url: "#",
         },
         {
-          title: "Starred",
-          url: "#",
+          title: "From",
+          url: "/form",
         },
         {
           title: "Settings",
