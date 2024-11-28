@@ -48,8 +48,8 @@ export default function BarChartLabel() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Bar Chart - Custom Label</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Nguyên nhân gây ra tai nạn</CardTitle>
+        <CardDescription>January - December 2023</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>

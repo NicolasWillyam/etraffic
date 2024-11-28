@@ -56,7 +56,7 @@ export default function BarChartMultiple() {
     <Card>
       <CardHeader>
         <CardTitle>Số vụ tai nạn theo giờ</CardTitle>
-        <CardDescription>January - December 2024</CardDescription>
+        <CardDescription>January - December 2023</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>

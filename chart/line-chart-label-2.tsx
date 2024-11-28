@@ -49,7 +49,7 @@ export default function LineChartLabel2() {
     <Card>
       <CardHeader>
         <CardTitle>Số người tử vong theo tháng</CardTitle>
-        <CardDescription>January - December 2024</CardDescription>
+        <CardDescription>January - December 2023</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>

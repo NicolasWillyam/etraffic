@@ -35,7 +35,7 @@ const data = {
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "eTraffic",
       logo: GalleryVerticalEnd,
       plan: "Enterprise",
     },
@@ -52,14 +52,14 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
-      url: "#",
+      title: "Traffic",
+      url: "/dashboard",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
+          title: "Dashboard",
+          url: "/dashboard",
         },
         {
           title: "From",
