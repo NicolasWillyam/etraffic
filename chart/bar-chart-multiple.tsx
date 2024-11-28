@@ -1,7 +1,7 @@
-"use client";
+"use client"
 
-import { TrendingUp } from "lucide-react";
-import { Bar, BarChart, XAxis, YAxis } from "recharts";
+import { TrendingUp } from "lucide-react"
+import { Bar, BarChart, CartesianGrid, XAxis } from "recharts"
 
 import {
   Card,
@@ -10,141 +10,74 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@/components/ui/card"
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/ui/chart";
-export const chartData = [
-  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-  { browser: "firefox", visitors: 187, fill: "var(--color-firefox)" },
-  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
-  { browser: "other", visitors: 90, fill: "var(--color-other)" },
-  { browser: "opera", visitors: 120, fill: "#FF6347" },
-  { browser: "brave", visitors: 95, fill: "#4682B4" },
-  { browser: "vivaldi", visitors: 85, fill: "#FFD700" },
-  { browser: "ucbrowser", visitors: 67, fill: "#ADFF2F" },
-  { browser: "duckduckgo", visitors: 58, fill: "#FF69B4" },
-  { browser: "yandex", visitors: 47, fill: "#8A2BE2" },
-  { browser: "qqbrowser", visitors: 39, fill: "#5F9EA0" },
-  { browser: "maxthon", visitors: 25, fill: "#6495ED" },
-  { browser: "sogou", visitors: 18, fill: "#FF4500" },
-  { browser: "tor", visitors: 10, fill: "#7FFF00" },
-];
+} from "@/components/ui/chart"
+const chartData = [
+  { month: "1", desktop: 293 },
+  { month: "2", desktop: 181 },
+  { month: "3", desktop: 148 },
+  { month: "4", desktop: 128 },
+  { month: "5", desktop: 192 },
+  { month: "6", desktop: 276 },
+  { month: "7", desktop: 324 },
+  { month: "8", desktop: 366 },
+  { month: "9", desktop: 370 },
+  { month: "10", desktop: 383 },
+  { month: "11", desktop: 389 },
+  { month: "12", desktop: 423 },
+  { month: "13", desktop: 373 },
+  { month: "14", desktop: 516 },
+  { month: "15", desktop: 581 },
+  { month: "16", desktop: 621 },
+  { month: "17", desktop: 642 },
+  { month: "18", desktop: 615 },
+  { month: "19", desktop: 831 },
+  { month: "20", desktop: 823 },
+  { month: "21", desktop: 907 },
+  { month: "22", desktop: 862 },
+  { month: "23", desktop: 691 },
+  { month: "24", desktop: 464 }
+]
 
-export const chartConfig = {
-  visitors: {
-    label: "Visitors",
-  },
-  chrome: {
-    label: "Chrome",
+const chartConfig = {
+  desktop: {
+    label: "Data",
     color: "hsl(var(--chart-1))",
   },
-  safari: {
-    label: "Safari",
-    color: "hsl(var(--chart-2))",
-  },
-  firefox: {
-    label: "Firefox",
-    color: "hsl(var(--chart-3))",
-  },
-  edge: {
-    label: "Edge",
-    color: "hsl(var(--chart-4))",
-  },
-  other: {
-    label: "Other",
-    color: "hsl(var(--chart-5))",
-  },
-  opera: {
-    label: "Opera",
-    color: "#FF6347",
-  },
-  brave: {
-    label: "Brave",
-    color: "#4682B4",
-  },
-  vivaldi: {
-    label: "Vivaldi",
-    color: "#FFD700",
-  },
-  ucbrowser: {
-    label: "UC Browser",
-    color: "#ADFF2F",
-  },
-  duckduckgo: {
-    label: "DuckDuckGo",
-    color: "#FF69B4",
-  },
-  yandex: {
-    label: "Yandex",
-    color: "#8A2BE2",
-  },
-  qqbrowser: {
-    label: "QQ Browser",
-    color: "#5F9EA0",
-  },
-  maxthon: {
-    label: "Maxthon",
-    color: "#6495ED",
-  },
-  sogou: {
-    label: "Sogou",
-    color: "#FF4500",
-  },
-  tor: {
-    label: "Tor",
-    color: "#7FFF00",
-  },
-} satisfies ChartConfig;
+} satisfies ChartConfig
 
 export default function BarChartMultiple() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Bar Chart - Mixed</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Số vụ tai nạn theo giờ</CardTitle>
+        <CardDescription>January - December 2024</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
-          <BarChart
-            accessibilityLayer
-            data={chartData}
-            layout="vertical"
-            margin={{
-              left: 0,
-            }}
-          >
-            <YAxis
-              dataKey="browser"
-              type="category"
+          <BarChart accessibilityLayer data={chartData}>
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="month"
               tickLine={false}
               tickMargin={10}
               axisLine={false}
-              tickFormatter={(value) =>
-                chartConfig[value as keyof typeof chartConfig]?.label
-              }
+              tickFormatter={(value) => value.slice(0, 3)}
             />
-            <XAxis dataKey="visitors" type="number" hide />
             <ChartTooltip
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="visitors" layout="vertical" radius={5} />
+            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={8} />
           </BarChart>
         </ChartContainer>
       </CardContent>
-      <CardFooter className="flex-col items-start gap-2 text-sm">
-        <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
-        </div>
-      </CardFooter>
+    
     </Card>
-  );
+  )
 }

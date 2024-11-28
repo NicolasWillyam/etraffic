@@ -17,9 +17,11 @@ import {
 import ThemeMode from "../../components/ui/theme-mode";
 import AreaChartStacked from "../../chart/AreaChartStacked";
 import BarChartMultiple from "../../chart/bar-chart-multiple";
+import BarChartLabel from "../../chart/bar-chart-custom-label";
 import PieChartDonut from "../../chart/pie-chart-donut";
 
 import LineChartLabel from "../../chart/line-chart-label";
+import LineChartLabel2 from "../../chart/line-chart-label-2";
 
 import AreaChartInteractive from "../../chart/area-chart";
 
@@ -53,23 +55,23 @@ export default function Page() {
         </header>
         <div className="flex flex-1 flex-col gap-4 p-4 pt-0">
           {/* <div className="grid auto-rows-min gap-4 md:grid-cols-5"> */}
-          <div className="grid auto-rows-min gap-4 md:grid-cols-3">
+          <div className="grid auto-rows-min gap-4 md:grid-cols-2">
             {/* <BarChartMultiple /> */}
             <LineChartLabel />
-            <LineChartLabel />
-            <LineChartLabel />
+            <LineChartLabel2 />
+            <BarChartMultiple/>
+            <BarChartLabel/>
+            {/* <LineChartLabel /> */}
 
             {/* <AreaChartStacked /> */}
           </div>
           <AreaChartInteractive />
-          <div className="grid auto-rows-min gap-4 md:grid-cols-2">
-            {/* <BarChartMultiple /> */}
-            {/* <AreaChartStacked /> */}
+          {/* <div className="grid auto-rows-min gap-4 md:grid-cols-2">
+           
             <BarChartMultiple />
             <BarChartMultiple />
 
-            {/* <AreaChartStacked /> */}
-          </div>
+          </div> */}
         </div>
       </SidebarInset>
     </SidebarProvider>

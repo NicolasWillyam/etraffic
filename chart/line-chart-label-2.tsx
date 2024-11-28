@@ -19,18 +19,18 @@ import {
   ChartTooltipContent,
 } from "../components/ui/chart";
 const chartData = [
-  { month: "January", desktop: 1319, mobile: 80 },
-  { month: "February", desktop: 916, mobile: 200 },
-  { month: "March", desktop: 1066, mobile: 120 },
-  { month: "April", desktop: 1091, mobile: 190 },
-  { month: "May", desktop: 915, mobile: 130 },
-  { month: "June", desktop: 783, mobile: 140 },
-  { month: "July", desktop: 648, mobile: 140 },
-  { month: "August", desktop: 460, mobile: 140 },
-  { month: "September", desktop: 607, mobile: 140 },
-  { month: "October", desktop: 1075, mobile: 140 },
-  { month: "November", desktop: 1187, mobile: 140 },
-  { month: "December", desktop: 1341, mobile: 140 },
+  { month: "January", desktop: 640, mobile: 80 },
+  { month: "February", desktop: 526, mobile: 200 },
+  { month: "March", desktop: 505, mobile: 120 },
+  { month: "April", desktop: 551, mobile: 190 },
+  { month: "May", desktop: 445, mobile: 130 },
+  { month: "June", desktop: 427, mobile: 140 },
+  { month: "July", desktop: 349, mobile: 140 },
+  { month: "August", desktop: 243, mobile: 140 },
+  { month: "September", desktop: 294, mobile: 140 },
+  { month: "October", desktop: 506, mobile: 140 },
+  { month: "November", desktop: 576, mobile: 140 },
+  { month: "December", desktop: 654, mobile: 140 },
 ];
 
 const chartConfig = {
@@ -44,11 +44,11 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export default function LineChartLabel() {
+export default function LineChartLabel2() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Số vụ tai nạn theo tháng</CardTitle>
+        <CardTitle>Số người tử vong theo tháng</CardTitle>
         <CardDescription>January - December 2024</CardDescription>
       </CardHeader>
       <CardContent>
