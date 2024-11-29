@@ -11,17 +11,15 @@ const Hero = () => {
       <div className="container text-center">
         <div className="mx-auto flex max-w-screen-lg flex-col gap-6">
           <h1 className="text-3xl font-extrabold lg:text-6xl">
-            A Collection of Components Built With Shadcn & Tailwind
+            eTraffic
           </h1>
           <p className="text-balance text-muted-foreground lg:text-lg">
-            Finely crafted components built with React, Tailwind and Shadcn UI.
-            Developers can copy and paste these blocks directly into their
-            project.
+            Hệ thống chuẩn hoá dữ liệu phục vụ giao thông thông minh
           </p>
         </div>
         <Link href={"/dashboard"}>
           <Button size="lg" className="mt-10">
-            Discover all components
+            Discover all features
           </Button>
         </Link>
         <div className="mx-auto mt-10 flex w-fit flex-col items-center gap-4 sm:flex-row">
@@ -29,12 +27,6 @@ const Hero = () => {
             <Avatar className="size-14 border">
               <AvatarImage
                 src="https://www.shadcnblocks.com/images/block/avatar-1.webp"
-                alt="placeholder"
-              />
-            </Avatar>
-            <Avatar className="size-14 border">
-              <AvatarImage
-                src="https://www.shadcnblocks.com/images/block/avatar-2.webp"
                 alt="placeholder"
               />
             </Avatar>

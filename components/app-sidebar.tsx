@@ -37,7 +37,7 @@ const data = {
     {
       name: "eTraffic",
       logo: GalleryVerticalEnd,
-      plan: "Enterprise",
+      plan: "ACEBK",
     },
     {
       name: "Acme Corp.",
@@ -62,32 +62,32 @@ const data = {
           url: "/dashboard",
         },
         {
-          title: "From",
+          title: "Data Input",
           url: "/form",
         },
-        {
-          title: "Settings",
-          url: "#",
-        },
+        // {
+        //   title: "Settings",
+        //   url: "#",
+        // },
       ],
     },
     {
-      title: "Models",
+      title: "Map",
       url: "#",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
+          title: "Accident Map",
           url: "/genesis",
         },
         {
-          title: "Explorer",
+          title: "Facilities Map",
           url: "/explorer",
         },
-        {
-          title: "Quantum",
-          url: "/quantum",
-        },
+        // {
+        //   title: "Quantum",
+        //   url: "/quantum",
+        // },
       ],
     },
     {
@@ -138,21 +138,7 @@ const data = {
     },
   ],
   projects: [
-    {
-      name: "Design Engineering",
-      url: "#",
-      icon: Frame,
-    },
-    {
-      name: "Sales & Marketing",
-      url: "#",
-      icon: PieChart,
-    },
-    {
-      name: "Travel",
-      url: "#",
-      icon: Map,
-    },
+    
   ],
 };
 
